@@ -7,9 +7,11 @@ def sieve(n):
         if sieve[j]:
             for i in range(2 * j, n + 1, j):
                 sieve[i] = False
+
+    # formatting into an array
     primes = []
     for i in range(2, n + 1):
         if sieve[i]:
             primes.append(i)
     return primes
-print(sieve(10000000))
+print(sieve(1000))
