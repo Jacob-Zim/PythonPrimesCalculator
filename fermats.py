@@ -10,16 +10,17 @@
 # provides a smaller margin of error
 
 import random
+import math
+def prime(n, k=1):
 
-def prime(n, k):
-
-    if n <= 1 or n == 4:
-        return False
-    if n == 3:
-        return True
+    if n < 2: return False
     
     while k > 0:
-        a = 2 + (random.random() % (n - 4))
-        if 
+        a = 2 + math.floor(random.random() * (n - 2))
+        print(a)
+        if a**(n-1) % n != 1:
+            return False
+        k -= 1
+    return True
 
-        
+print(prime(331))
