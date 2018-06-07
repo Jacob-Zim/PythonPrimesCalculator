@@ -23,4 +23,4 @@ def prime(n, k=1):
         k -= 1
     return True
 
-print(prime(331))
+print(prime(332))
