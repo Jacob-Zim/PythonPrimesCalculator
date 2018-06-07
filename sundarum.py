@@ -1,5 +1,6 @@
 from itertools import count
  
+# make code python friendly
 def sundaram(n):
     nk = (n-1)//2
     ks = list(range(nk+1))
