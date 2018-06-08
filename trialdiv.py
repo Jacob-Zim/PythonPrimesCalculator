@@ -12,8 +12,3 @@ def prime(n):
             return False
     
     return True
-
-start = time.time()
-print(prime(99397))
-end = time.time()
-print((str(end - start))+' seconds')

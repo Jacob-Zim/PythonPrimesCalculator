@@ -20,8 +20,3 @@ def prime_factors(n):
         arr.append(n)
     
     return arr
-
-start = time.time()
-print(prime_factors(100000000))
-end = time.time()
-print((str(end - start))+' seconds')

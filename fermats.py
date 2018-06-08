@@ -10,6 +10,7 @@
 # provides a smaller margin of error
 
 import random
+# try switching out random
 import math
 import time
 def prime(n, k=1):
@@ -18,12 +19,8 @@ def prime(n, k=1):
     
     while k > 0:
         a = 2 + math.floor(random.random() * (n - 2))
+        # fix the modulo - take the tail look at math module
         if a**(n-1) % n != 1:
             return False
         k -= 1
     return True
-
-start = time.time()
-print(prime(1000000))
-end = time.time()
-print((str(end - start))+' seconds')

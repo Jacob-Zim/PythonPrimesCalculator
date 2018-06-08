@@ -16,8 +16,3 @@ def sieve(n):
         if sieve[i]:
             primes.append(i)
     return primes
-
-start = time.time()
-print(sieve(100000000))
-end = time.time()
-print((str(end - start))+' seconds')

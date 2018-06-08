@@ -1,5 +1,5 @@
 import time
-def atkin_sieve(limit):
+def sieve(limit):
     assert limit > 3
     sieve_list = [False] * (limit + 1)
     sieve_list[2:4] = (True, True)
@@ -42,8 +42,3 @@ def atkin_sieve(limit):
         if sieve_list[i]:
             primes.append(i)
     return primes
-
-start = time.time()
-print(atkin_sieve(100000000))
-end = time.time()
-print((str(end - start))+' seconds')
