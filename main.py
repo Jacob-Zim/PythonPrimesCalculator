@@ -8,7 +8,6 @@ import trialdiv
 import factors
 
 import time
-import math
 
 def timer(function):
     start = time.time()
@@ -16,7 +15,7 @@ def timer(function):
     end = time.time()
     print('Calculation took '+(str(end - start))+' seconds')
 
-print('Hey there!\n\nThis program can calculate whether a number is prime,\nfind the prime factors of a number,\nand sieve through the primes up to a given limit\n')
+print('\nHey there!\n\nThis program can calculate whether a number is prime,\nfind the prime factors of a number,\nand sieve through the primes up to a given limit\n')
 
 
 initial_input = ''
@@ -32,24 +31,24 @@ while initial_input not in {'p', 's', 'f', 'n'}:
                 while type(number) is not int:
                     number = input('Please type in an integer to find the primality of\n')
                     try:
-                        number = abs(int(float(number)))
+                        number = abs(int((number)))
                     except:
                         number = ''
                     if type(number) is int:
                         timer(trialdiv.prime(number))
-                        initial_input = input('\n Awesome! You can type n if you are done, otherwise hit any key to calculate something else!\n')
+                        initial_input = input('\n Awesome! You can type n if you are done, otherwise hit r to calculate something else!\n')
 
             if test[0] == 'f':
                 number = ''
                 while type(number) is not int:
                     number = input('Please type in an integer to find the primality of\n')
                     try:
-                        number = abs(int(float(number)))
+                        number = abs(int((number)))
                     except:
                         number = ''
                     if type(number) is int:
                         timer(fermats.prime(number))
-                        initial_input = input('\n Awesome! You can type n if you are done, otherwise hit any key to calculate something else!\n')
+                        initial_input = input('\n Awesome! You can type n if you are done, otherwise hit r to calculate something else!\n')
 
     if initial_input[0] == 's':
         test = ''
@@ -61,45 +60,45 @@ while initial_input not in {'p', 's', 'f', 'n'}:
                 while type(number) is not int:
                     number = input('Please type in an integer to sieve from with Atkin\n')
                     try:
-                        number = abs(int(float(number)))
+                        number = abs(int((number)))
                     except:
                         number = ''
                     if type(number) is int:
                         timer(atkins.sieve(number))
-                        initial_input = input('\n Awesome! You can type n if you are done, otherwise hit any key to calculate something else!\n')
+                        initial_input = input('\n Awesome! You can type n if you are done, otherwise hit r to calculate something else!\n')
 
             if test[0] == 'e':
                 number = ''
                 while type(number) is not int:
                     number = input('Please type in an integer to sieve from with Eratosthenes\n')
                     try:
-                        number = abs(int(float(number)))
+                        number = abs(int((number)))
                     except:
                         number = ''
                     if type(number) is int:
                         timer(eratosthenes.sieve(number))
-                        initial_input = input('\n Awesome! You can type n if you are done, otherwise hit any key to calculate something else!\n')
+                        initial_input = input('\n Awesome! You can type n if you are done, otherwise hit r to calculate something else!\n')
            
             if test[0] == 's':
                 number = ''
                 while type(number) is not int:
                     number = input('Please type in an integer to sieve from with Sundarum\n')
                     try:
-                        number = abs(int(float(number)))
+                        number = abs(int((number)))
                     except:
                         number = ''
                     if type(number) is int:
                         timer(sundarum.sieve(number))
-                        initial_input = input('\n Awesome! You can type n if you are done, otherwise hit any key to calculate something else!\n')
+                        initial_input = input('\n Awesome! You can type n if you are done, otherwise hit r to calculate something else!\n')
             
     if initial_input[0] == 'f':
         number = ''
         while type(number) is not int:
             number = input('Please type in an integer to find the prime factors of\n')
             try:
-                number = abs(int(float(number)))
+                number = abs(int((number)))
             except:
                 number = ''
             if type(number) is int:
                 timer(factors.prime_factors(number))
-                initial_input = input('\n Awesome! You can type n if you are done, otherwise hit any key to calculate something else!\n')
+                initial_input = input('\n Awesome! You can type n if you are done, otherwise hit r to calculate something else!\n')

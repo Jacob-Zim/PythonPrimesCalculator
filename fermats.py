@@ -19,8 +19,8 @@ def prime(n, k=1):
     
     while k > 0:
         a = 2 + math.floor(random.random() * (n - 2))
-        # fix the modulo - take the tail look at math module
-        if a**(n-1) % n != 1:
+        # note - typical modulo notation will bog this down completely, using built in pow() instead
+        if pow(a,(n-1),n) != 1:
             return False
         k -= 1
     return True
