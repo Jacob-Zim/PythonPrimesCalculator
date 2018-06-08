@@ -22,4 +22,6 @@ Calculating primes is particularly useful in public key cryptography, RSA uses t
 note - these algorithms are not heuristic, and are not perfect implementations, but they demonstrate the
 general practicality of some common prime algorithms
 
+I plan to refactor this code into node to create a fancy web app :)
+
 Thanks for checking it out, if you have any comments or questions please feel free to send them my way!
