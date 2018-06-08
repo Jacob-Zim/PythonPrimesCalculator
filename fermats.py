@@ -11,16 +11,19 @@
 
 import random
 import math
+import time
 def prime(n, k=1):
 
     if n < 2: return False
     
     while k > 0:
         a = 2 + math.floor(random.random() * (n - 2))
-        print(a)
         if a**(n-1) % n != 1:
             return False
         k -= 1
     return True
 
-print(prime(332))
+start = time.time()
+print(prime(1000000))
+end = time.time()
+print((str(end - start))+' seconds')

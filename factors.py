@@ -1,4 +1,5 @@
 import math
+import time
 def prime_factors(n):
     arr = []
 
@@ -20,4 +21,7 @@ def prime_factors(n):
     
     return arr
 
-print(prime_factors(50))
+start = time.time()
+print(prime_factors(100000000))
+end = time.time()
+print((str(end - start))+' seconds')

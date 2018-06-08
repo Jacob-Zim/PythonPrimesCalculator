@@ -1,5 +1,5 @@
 from itertools import count
- 
+import time
 # make code python friendly
 def sundaram(n):
     nk = (n-1)//2
@@ -15,4 +15,7 @@ def sundaram(n):
  
     return [2] + [2*k+1 for k in filter(None, ks)]
 
-print(sundaram(100))
+start = time.time()
+print(sundaram(10000000))
+end = time.time()
+print((str(end - start))+' seconds')

@@ -1,5 +1,5 @@
 import math
-
+import time
 def prime(n):
 
     if n <= 1:
@@ -13,4 +13,7 @@ def prime(n):
     
     return True
 
-print(prime(18))
+start = time.time()
+print(prime(99397))
+end = time.time()
+print((str(end - start))+' seconds')

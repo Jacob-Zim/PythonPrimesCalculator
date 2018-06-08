@@ -1,3 +1,4 @@
+import time
 def atkin_sieve(limit):
     assert limit > 3
     sieve_list = [False] * (limit + 1)
@@ -42,4 +43,7 @@ def atkin_sieve(limit):
             primes.append(i)
     return primes
 
-print(atkin_sieve(1000))
+start = time.time()
+print(atkin_sieve(100000000))
+end = time.time()
+print((str(end - start))+' seconds')

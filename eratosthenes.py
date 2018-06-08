@@ -1,4 +1,5 @@
 import math
+import time
 def sieve(n):
     """find all prime numbers up to n, O(n*log(log(n)))"""
     sieve = [True for l in range(n + 1)]
@@ -15,4 +16,8 @@ def sieve(n):
         if sieve[i]:
             primes.append(i)
     return primes
-print(sieve(1000))
+
+start = time.time()
+print(sieve(100000000))
+end = time.time()
+print((str(end - start))+' seconds')
